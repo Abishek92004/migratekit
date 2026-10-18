@@ -1,0 +1,29 @@
+# --- Step 1: foundation ---
+pydantic>=2.5
+pytest>=8.0
+python-dotenv>=1.0
+rich>=13.0
+typer>=0.12
+
+# --- Step 2-4: harness, tools, sandbox ---
+# anthropic
+# openai
+# gitpython
+# docker
+# mcp
+
+# --- Step 5-6: analysis, RAG, memory ---
+# tree-sitter
+# tree-sitter-python
+# psycopg[binary]
+# pgvector
+# rank-bm25
+# sentence-transformers
+
+# --- Step 9: tracing, dashboard, evals ---
+# opentelemetry-api
+# opentelemetry-sdk
+# fastapi
+# uvicorn
+# pandas
+# pyarrow
