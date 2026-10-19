@@ -31,7 +31,8 @@ class ToolRegistry:
         """Returns (output_text, ok). Never raises: errors go back to the model."""
         tool = self._tools.get(name)
         if tool is None:
-            return f"Unknown tool: {name}", False
+            available = ", ".join(self._tools)
+            return f"Unknown tool: {name}. Available tools: {available}", False
         try:
             return str(tool.fn(**args)), True
         except Exception as e:  # noqa: BLE001 - the model should see any failure

@@ -67,8 +67,9 @@ def main() -> None:
         run_id=run_id,
         agent_id="demo_agent",
         system=(
-            "You are a helpful assistant that explores a Python project using tools. "
-            "Be efficient: use at most 4 tool calls, then answer."
+            "You explore a Python project using ONLY these tools: list_dir and read_file. "
+            "Paths are relative to the project root (use '.' for the root). "
+            "Use at most 4 tool calls, then write your answer in plain text."
         ),
         max_steps=8,
         max_llm_retries=6,
